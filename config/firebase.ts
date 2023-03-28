@@ -11,6 +11,7 @@ const firebaseConfig = {
   storageBucket: "biowordle.appspot.com",
   messagingSenderId: "502187232008",
   appId: "1:502187232008:web:f7fa818170911288e1babd",
+  measurementId: "G-RSG54HJGST"
 };
 
 // Initialize Firebase
