@@ -101,6 +101,7 @@ export const Game = () => {
   const [isSubmitting, setSubmitting] = useBoolean();
 
   const { words } = useLoaderData() as LoaderData;
+  console.log("🚀 ~ file: Game.tsx:104 ~ Game ~ words:", words);
   const { logIncorrectWord } = useIncorrectWords();
 
   const currentWord = words.find(
@@ -248,7 +249,7 @@ export const Game = () => {
 
   const checkIsWordFromLibrary = (word: string) => {
     const isAlreadyUsed = words?.some(
-      ({ value }) => value.toUpperCase() === word.toUpperCase()
+      ({ value }) => value?.toUpperCase() === word.toUpperCase()
     );
 
     return isAlreadyUsed;

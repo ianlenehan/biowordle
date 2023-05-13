@@ -77,6 +77,8 @@ export const Admin = () => {
   const handleSaveWord = async () => {
     const wordForDate = getWordForDate();
 
+    if (!word) return;
+
     try {
       const dateString = format(date, FORMAT_STRING);
       if (isPast(date) || (isToday(date) && !!wordForDate)) {

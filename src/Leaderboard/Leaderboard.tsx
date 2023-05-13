@@ -113,7 +113,7 @@ export const Leaderboard = () => {
               <Tbody>
                 {monthly?.map((score) => (
                   <Tr key={score.userId}>
-                    <Td color="gray.100">{score.email || score.name}</Td>
+                    <Td color="gray.100">{score.name || score.email}</Td>
                     <Td color="gray.100" isNumeric>
                       {score.value}
                     </Td>
